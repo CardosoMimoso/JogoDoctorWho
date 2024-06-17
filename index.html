@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Doctor Who Game</title>
+    <link rel="icon" href="img/tardisicon.png">
+    <link href="css/estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id='fundo'>
+            <div id='area_jogo' class='area_jogo'>
+                <div id='start' onclick='start()'>
+                    <div class="start-content">
+                        <img src="img/logodw.png" height=100px />
+                        <p>UTILIZE AS SETAS PARA SE MOVIMENTAR E A
+                        <b>BARRA</b> PARA ATIRAR.</p>
+                        <h2>CLIQUE AQUI PARA INICIAR</h2>
+                    </div>
+                </div>
+                <div id='gameover' style='display:none' onclick='reiniciar()'>
+                    <div class="start-content">
+                        <img src="img/logodw.png" height=100px />
+						<p>TARDIS EXPLODIU!</p>
+						<p>TENTE NOVAMENTE</p>
+						<h2>CLIQUE AQUI PARA INICIAR</h2>
+					</div>
+                </div>
+				<div id='vitoria' style='display:none' onclick='reiniciar()'>
+                    <div class="start-content">
+                        <img src="img/logodw.png" height=100px />
+						<p>VOCÊ NEUTRALIZOU TODOS OS DALEKS!
+						<b>VOCÊ GANHOU!</b>
+						<h2>CLIQUE AQUI PARA INICIAR NOVAMENTE</h2>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="sons/somjogo.mp3" preload="auto" id="somjogo"></audio>
+    <audio src="sons/laser.mp3" preload="auto" id="laserleader"></audio>
+    <audio src="sons/laser.mp3" preload="auto" id="lasersupreme"></audio>
+    <audio src="sons/tirotardis.mp3" preload="auto" id="tirotardis"></audio>
+    <audio src="sons/salva.mp3" preload="auto" id="salva"></audio>
+    <audio src="sons/explode.mp3" preload="auto" id="explode"></audio>
+    <audio src="sons/explode.mp3" preload="auto" id="explodetardis"></audio>
+    <audio src="sons/grito.mp3" preload="auto" id="grito"></audio>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-collision.min.js"></script>
+    <script type="text/javascript" src="js/jogo.js"></script> 
+</body>
+</html>

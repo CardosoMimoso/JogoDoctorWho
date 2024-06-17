@@ -1,0 +1,466 @@
+@font-face {
+  font-family: "Doctor Who";
+  src: url("DrKabel-pvvD.otf");
+}
+
+body {
+  margin: 0px;
+  background: url("../img/fundo.gif");
+}
+
+img {
+  vertical-align: middle;
+  max-height: 100px;
+  max-width: 160px;
+}
+
+#fundo {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#start, #gameover, #vitoria {
+  width: 350px;
+  height: 300px;
+  background: rgb(251, 254, 255);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-content {
+  text-align: center;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.area_jogo {
+  position: absolute;
+  width: 810px;
+  height: 455px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../img/fundo.png");
+}
+
+#gameover h1, #start h1, #vitoria h1 {
+  padding-top: 25px;
+  font-family: Doctor Who;
+  font-size: 36px;
+}
+
+#gameover p, #start p, #vitoria p {
+  font-family: Doctor Who;
+  font-size: 24px;
+}
+
+#gameover h2, #start h2, #vitoria h2 {
+  font-family: Doctor Who;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.vida {
+  background-image: url("../img/vida.png");
+  background-position: 0px 0px;
+  height: 30px;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  width: 114px;
+  z-index: 1;
+}
+
+.tardis.invencivel {
+  width: 50px;
+  height: 75px;
+  top: 0px;
+  left: 75px;
+  z-index: 10;
+  background-image: url("../img/tardisinvencivel.png");
+  position: absolute;
+  animation: piscar 0.5s infinite, p_invencivel 0.9s steps(8) infinite;
+  -webkit-animation: piscar 0.5s infinite, p_invencivel 0.9s steps(8) infinite;
+  -moz-animation: piscar 0.5s infinite, p_invencivel 0.9s steps(8) infinite;
+  -ms-animation: piscar 0.5s infinite, p_invencivel 0.9s steps(8) infinite;
+  -o-animation: piscar 0.5s infinite, p_invencivel 0.9s steps(8) infinite;
+}
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes p_invencivel {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-webkit-keyframes p_invencivel {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-moz-keyframes p_invencivel {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-ms-keyframes p_invencivel {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-o-keyframes p_invencivel {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+.tardis {
+  width: 50px;
+  height: 75px;
+  top: 0px;
+  left: 75px;
+  z-index: 10;
+  background-image: url("../img/tardis300.png");
+  position: absolute;
+  animation: p_tardis 0.9s steps(8) infinite;
+  -webkit-animation: p_tardis 0.9s steps(8) infinite;
+  -moz-animation: p_tardis 0.9s steps(8) infinite;
+  -ms-animation: p_tardis 0.9s steps(8) infinite;
+  -o-animation: p_tardis 0.9s steps(8) infinite;
+}
+
+@keyframes p_tardis {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-webkit-keyframes p_tardis {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-moz-keyframes p_tardis {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-ms-keyframes p_tardis {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+@-o-keyframes p_tardis {
+  from { background-position: 0px; }
+  to { background-position: -400px; }
+}
+
+.tardis_explode {
+  width: 100px;
+  height: 98px;
+  top: 10px;
+  left: 0px;
+  background-image: url("../img/tardisexplosion800.png");
+  position: relative;
+  animation: pe_tardis 0.9s steps(8) infinite;
+  -webkit-animation: pe_tardis 0.9s steps(8) infinite;
+  -moz-animation: pe_tardis 0.9s steps(8) infinite;
+  -ms-animation: pe_tardis 0.9s steps(8) infinite;
+  -o-animation: pe_tardis 0.9s steps(8) infinite;
+}
+
+@keyframes pe_tardis {
+  from { background-position: 0px; }
+  to { background-position: -800px; }
+}
+
+@-webkit-keyframes pe_tardis {
+  from { background-position: 0px; }
+  to { background-position: -800px; }
+}
+
+@-moz-keyframes pe_tardis {
+  from { background-position: 0px; }
+  to { background-position: -800px; }
+}
+
+@-ms-keyframes pe_tardis {
+  from { background-position: 0px; }
+  to { background-position: -800px; }
+}
+
+@-o-keyframes pe_tardis {
+  from { background-position: 0px; }
+  to { background-position: -800px; }
+}
+
+.leader {
+  width: 53px;
+  height: 65px;
+  margin-top: 10px;
+  left: 810px;
+  position: absolute;
+  background-image: url("../img/dalek.png");
+  animation: p_leader 2s ease-in-out infinite;
+}
+
+@keyframes p_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.leader_explode {
+  width: 65px;
+  height: 65px;
+  margin-top: 10px;
+  left: 810px;
+  position: absolute;
+  background-image: url("../img/dalekexplosion.png");
+  animation: pe_leader 0.5s steps(6) infinite;
+  -webkit-animation: pe_leader 0.5s steps(6) infinite;
+  -moz-animation: pe_leader 0.5s steps(6) infinite;
+  -ms-animation: pe_leader 0.5s steps(6) infinite;
+  -o-animation: pe_leader 0.5s steps(6) infinite;
+}
+
+@keyframes pe_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-webkit-keyframes pe_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-moz-keyframes pe_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-ms-keyframes pe_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-o-keyframes pe_leader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+.supreme {
+  width: 53px;
+  height: 65px;
+  margin-top: 10px;
+  left: 810px;
+  position: absolute;
+  background-image: url("../img/supreme.png");
+  animation: p_supreme 2s ease-in-out infinite;
+}
+
+@keyframes p_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.supreme_explode {
+  width: 65px;
+  height: 65px;
+  margin-top: 10px;
+  left: 810px;
+  position: absolute;
+  background-image: url("../img/supremeexplosion.png");
+  animation: pe_supreme 0.5s steps(6) infinite;
+  -webkit-animation: pe_supreme 0.5s steps(6) infinite;
+  -moz-animation: pe_supreme 0.5s steps(6) infinite;
+  -ms-animation: pe_supreme 0.5s steps(6) infinite;
+  -o-animation: pe_supreme 0.5s steps(6) infinite;
+}
+
+@keyframes pe_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-webkit-keyframes pe_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-moz-keyframes pe_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-ms-keyframes pe_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+@-o-keyframes pe_supreme {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  from { background-position: 0px; }
+  to { background-position: -390px; }
+}
+
+.k9 {
+  width: 46px;
+  height: 29px;
+  position: absolute;
+  background-image: url("../img/k9.png");
+  animation: p_k9 2s ease-in-out infinite;
+}
+
+@keyframes p_k9 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.tiro_leader {
+  width: 32px;
+  height: 32px;
+  left: 810px;
+  top: 10px;
+  position: absolute;
+  background-image: url("../img/dalektiro.png");
+  animation: p_ini_tiro 0.4s steps(3) infinite;
+  -webkit-animation: p_ini_tiro 0.4s steps(3) infinite;
+  -moz-animation: p_ini_tiro 0.4s steps(3) infinite;
+  -ms-animation: p_ini_tiro 0.4s steps(3) infinite;
+  -o-animation: p_ini_tiro 0.4s steps(3) infinite;
+}
+
+@keyframes p_ini_tiro {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-webkit-keyframes p_ini_tiro {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-moz-keyframes p_ini_tiro {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-ms-keyframes p_ini_tiro {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-o-keyframes p_ini_tiro {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+.tiro_supreme {
+  width: 32px;
+  height: 32px;
+  left: 810px;
+  top: 10px;
+  position: absolute;
+  background-image: url("../img/tirosupreme.png");
+  animation: p_tiro_supreme 0.4s steps(3) infinite;
+  -webkit-animation: p_tiro_supreme 0.4s steps(3) infinite;
+  -moz-animation: p_tiro_supreme 0.4s steps(3) infinite;
+  -ms-animation: p_tiro_supreme 0.4s steps(3) infinite;
+  -o-animation: p_tiro_supreme 0.4s steps(3) infinite;
+}
+
+@keyframes p_tiro_supreme {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-webkit-keyframes p_tiro_supreme {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-moz-keyframes p_tiro_supreme {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-ms-keyframes p_tiro_supreme {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+@-o-keyframes p_tiro_supreme {
+  from { background-position: 0px; }
+  to { background-position: -96px; }
+}
+
+.tiro {
+  width: 40px;
+  height: 23px;
+  margin-top: 0;
+  position: absolute;
+  background-image: url("../img/tiro.png");
+}
+
+.pontos {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  margin-left: 700px;
+  font-family: Doctor Who;
+  top: 5px;
+  text-align: center;
+  position: absolute;
+}
